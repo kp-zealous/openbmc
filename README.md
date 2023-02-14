@@ -86,4 +86,40 @@ bitbake obmc-phosphor-image
 Additional details can be found in the [docs](https://github.com/openbmc/docs)
 repository.
 
-## 
+## Build openBmc qemu
+
+steps to build qemu
+
+#### step 1
+
+
+```sh
+apt-get install -y pkg-config
+apt install ninja-build
+apt install libglib2.0-dev
+apt install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+apt-get install libvirt libvirt-bin bridge-utils uml-utilities qemu-system-common
+```
+
+Installing pkg-config package, ninja-build package, libglib2.0-dev package, libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev package and 
+rt libvirt-bin bridge-utils uml-utilities qemu-system-common package on ubuntu
+
+#### step 2
+
+```sh
+git clone https://github.com/openbmc/qemu.git
+cd qemu
+git submodule update --init dtc
+mkdir build
+cd build
+../configure --target-list=arm-softmmu
+make
+```
+
+Now clone the website and build a file 
+
+#### step 3
+
+Built file will be located at: ```sh arm-softmmu/qemu-system-arm```
+
+This one is contributed by Krithika Priya.PR
