@@ -120,6 +120,6 @@ Now clone the website and build a file
 
 #### step 3
 
-Built file will be located at: ```sh arm-softmmu/qemu-system-arm```
+Built file will be located at: ``` arm-softmmu/qemu-system-arm```
 
 This one is contributed by Krithika Priya.PR
