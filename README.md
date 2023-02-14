@@ -130,5 +130,4 @@ Command to run the OpenBmc
 
 Built file will be located at: ``` arm-softmmu/qemu-system-arm```
 
-
-***** This one is contributed by Krithika Priya.PR *****
+This one is contributed by Krithika Priya.PR 
